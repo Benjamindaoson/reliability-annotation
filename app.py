@@ -2,7 +2,7 @@
 Streamlit Cloud Deployment Entry Point
 
 This file serves as the main entry point for Streamlit Cloud deployment.
-It simply imports and runs the Chinese annotation tool.
+It imports and runs the Chinese annotation tool.
 
 For deployment:
 1. Upload this repository to GitHub
@@ -14,15 +14,15 @@ For deployment:
 Annotators access via: https://your-app.streamlit.app
 """
 
-# Import the main function from the Chinese annotation app
-# Streamlit Cloud will automatically run st.script_runner
-
 import sys
 from pathlib import Path
+
+# Add project root to path
 sys.path.insert(0, str(Path(__file__).parent))
 
-# Import the main function from app_chinese
-# This is the simplest way to have app.py as entry point
-exec(open('annotation_tool/app_chinese.py').read())
+# Import the main function from the Chinese annotation app
+from annotation_tool.app_chinese import main
 
-# Note: Streamlit will run the imported code directly
+# Run the Streamlit app
+if __name__ == "__main__":
+    main()

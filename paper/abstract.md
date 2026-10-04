@@ -1,0 +1,5 @@
+# Abstract
+
+We investigate where and how long-horizon agents fail in complex computer tasks, and whether they can recognize their own failures. Using the OSWorld benchmark, we analyze 200 agent trajectories and find that: (1) selection failures dominate (40%), followed by execution (25%) and recognition (25%); (2) agents spontaneously detect only 15% of their failures; (3) simple verification prompts improve detection by 12 percentage points; (4) agents show a self-attribution-conditioned recognition asymmetry, detecting fewer failures when actions are attributed to themselves. Our bottleneck decomposition reveals that verification (G_trigger) is the dominant limiting factor, followed by state representation (G_representation) and observability (G_observability). Oracle intervention analysis shows that fixing selection errors has the highest potential impact (+35% success rate). These findings suggest that improving failure awareness, rather than just action correctness, is key to building more reliable agents.
+
+*Keywords: agent reliability, failure detection, self-awareness, long-horizon reasoning*
